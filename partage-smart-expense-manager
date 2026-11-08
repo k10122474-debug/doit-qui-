@@ -1,0 +1,134 @@
+
+{
+  "application": {
+    "name": "Partage",
+    "description": "Qui doit combien à qui ?",
+    "language": "fr",
+    "default_currency": "FCFA",
+    "platform": "Android et Web"
+  },
+  "workflow": [
+    {
+      "step": 1,
+      "name": "Demarrage",
+      "actions": [
+        "Ouvrir l'application",
+        "Charger les donnees sauvegardees",
+        "Afficher l'ecran principal"
+      ]
+    },
+    {
+      "step": 2,
+      "name": "Gestion des participants",
+      "actions": [
+        "Ajouter un participant avec son prenom",
+        "Afficher la liste des participants",
+        "Supprimer un participant sans depense associee",
+        "Choisir la monnaie"
+      ],
+      "validation": [
+        "Refuser les noms vides",
+        "Refuser les prenoms en double"
+      ]
+    },
+    {
+      "step": 3,
+      "name": "Gestion des depenses",
+      "actions": [
+        "Saisir le nom de la depense",
+        "Saisir le montant",
+        "Selectionner la personne qui a paye",
+        "Selectionner les participants concernes",
+        "Valider la depense",
+        "Enregistrer la depense"
+      ],
+      "validation": [
+        "Au moins deux participants doivent exister",
+        "Le montant doit etre superieur a zero",
+        "Au moins une personne doit etre selectionnee"
+      ]
+    },
+    {
+      "step": 4,
+      "name": "Calcul automatique",
+      "actions": [
+        "Calculer la part de chaque participant",
+        "Calculer le total paye par chaque personne",
+        "Calculer les soldes individuels",
+        "Identifier les creanciers",
+        "Identifier les debiteurs"
+      ]
+    },
+    {
+      "step": 5,
+      "name": "Repartition des dettes",
+      "actions": [
+        "Trier les personnes selon leurs soldes",
+        "Calculer les remboursements optimises",
+        "Afficher qui doit payer",
+        "Afficher qui doit recevoir",
+        "Afficher le montant exact a rembourser"
+      ]
+    },
+    {
+      "step": 6,
+      "name": "Historique des depenses",
+      "actions": [
+        "Afficher toutes les depenses",
+        "Afficher le payeur",
+        "Afficher les participants concernes",
+        "Afficher les montants",
+        "Permettre la suppression d'une depense"
+      ]
+    },
+    {
+      "step": 7,
+      "name": "Sauvegarde",
+      "actions": [
+        "Sauvegarder automatiquement les participants",
+        "Sauvegarder les depenses",
+        "Sauvegarder la monnaie",
+        "Restaurer les donnees a la prochaine ouverture"
+      ],
+      "storage": "LocalStorage"
+    },
+    {
+      "step": 8,
+      "name": "Reinitialisation",
+      "actions": [
+        "Demander une confirmation",
+        "Effacer les participants",
+        "Effacer les depenses",
+        "Conserver la monnaie selectionnee"
+      ]
+    },
+    {
+      "step": 9,
+      "name": "Interface utilisateur",
+      "features": [
+        "Design moderne",
+        "Interface responsive",
+        "Compatibilite Android",
+        "Mode clair",
+        "Mode sombre",
+        "Navigation simple",
+        "Affichage des resultats en temps reel"
+      ]
+    }
+  ],
+  "technical_architecture": {
+    "frontend": "HTML",
+    "styling": "CSS",
+    "logic": "JavaScript",
+    "storage": "LocalStorage",
+    "calculation": "Debt settlement algorithm"
+  },
+  "final_objective": "Creer une application simple, rapide et fiable permettant de partager les depenses entre plusieurs personnes et de determiner exactement qui doit combien a qui.",
+  "development_instructions": [
+    "Conserver toutes les fonctionnalites existantes",
+    "Ne pas supprimer l'algorithme actuel de calcul des dettes",
+    "Ne pas casser les fonctionnalites deja operationnelles",
+    "Ameliorer progressivement l'application",
+    "Verifier les calculs avant chaque livraison"
+  ]
+}
